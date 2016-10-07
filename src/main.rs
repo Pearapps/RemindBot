@@ -29,26 +29,26 @@ fn main() {
     {
         let mut parser = ArgumentParser::new();
         parser.refer(&mut repo_owner)
-            .add_argument("owner", Store, "Owner of the github repo.");
+            .add_option(&["--owner"], Store, "Owner of the github repo.");
         parser.refer(&mut repo)
-            .add_argument("repo", Store, "The name of the github repo.");
+            .add_option(&["--repo"], Store, "The name of the github repo.");
 
         parser.refer(&mut time_since_comment_to_consider_disqualification)
-            .add_argument("seconds",
+            .add_option(&["--seconds"],
                           Store,
                           "The lower limit of seconds since the last time the assignee has 
    					  \
                            commented on a PR to remind the assignee via a comment.");
 
         parser.refer(&mut message)
-            .add_argument("message",
+            .add_option(&["--message"],
                           Store,
                           "The message in the comment on the open pull request.
    					  The \
                            default is 24 * 60 * 60; which is a day in seconds.");
 
         parser.refer(&mut authorization_token)
-            .add_argument("auth_token",
+            .add_option(&["--auth_token"],
                           Store,
                           "The personal access token of the user that will be requesting \
                            information on the repo's pull requests
