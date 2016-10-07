@@ -26,4 +26,4 @@ This bot also will tell you the average amount of time all open Pull Requests wi
 
 ## Why rust?
 
-Rust is fast and safe.
+Rust is expressive, safe, and fast.
