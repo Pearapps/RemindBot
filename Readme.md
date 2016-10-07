@@ -11,7 +11,7 @@ Remindbot works by looking at all the pull requests in a repo and checking to se
 
 If these two are not true and the PR is older than a day (also configurable, matches the time specified in #2 above), the bot will leave a comment on the Pull Request to remind the assignee that they need to review.
 
-# How to use:
+# How to use
 
 1. Compile the bot
 	- Use `cargo build --release`
