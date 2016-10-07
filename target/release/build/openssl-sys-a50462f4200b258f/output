@@ -1,3 +1,0 @@
-cargo:rustc-link-lib=dylib=ssl
-cargo:rustc-link-lib=dylib=crypto
-cargo:include=/usr/local/opt/openssl/include
