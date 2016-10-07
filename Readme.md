@@ -17,3 +17,7 @@ If these two are not true and the PR is older than a day (also configurable, mat
 	- Use `cargo build --release`
 2. cd to the directory where the binary is built (by default its at ./target/release)
 3. The command to run remind bot is `remindbot --owner pearapps --repo initializeme --auth_token SOME_TOKEN` 
+
+# What else
+
+This bot also will tell you the average amount of time all open Pull Requests with an assignee have been open.
