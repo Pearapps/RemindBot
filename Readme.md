@@ -16,7 +16,9 @@ If these two are not true and the PR is older than a day (also configurable, mat
 1. Compile the bot
 	- Use `cargo build --release`
 2. cd to the directory where the binary is built (by default its at ./target/release)
-3. The command to run remind bot is `remindbot --owner pearapps --repo initializeme --auth_token SOME_TOKEN` 
+3. The command to run RemindBot is `remindbot --owner pearapps --repo initializeme --auth_token SOME_TOKEN` 
+	- This will run RemindBot once
+	- If you want RemindBot to run continuously - you have to handle that yourself for now.
 
 # What else
 
