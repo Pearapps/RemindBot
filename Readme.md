@@ -17,6 +17,8 @@ If these two are not true and the PR is older than a day (also configurable, mat
 	- Use `cargo build --release`
 2. cd to the directory where the binary is built (by default its at ./target/release)
 3. The command to run RemindBot is `remindbot --owner pearapps --repo initializeme --auth_token SOME_TOKEN` 
+	- `--owner` is the github user whose repo you want to remind assignees on
+	- `--repo` is the repo name you want to remind assignees on
 	- This will run RemindBot once
 	- If you want RemindBot to run continuously - you have to handle that yourself for now.
 
