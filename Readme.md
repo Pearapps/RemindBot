@@ -22,7 +22,7 @@ If these two are not true and the PR is older than a day (also configurable), th
 	- This will run RemindBot once
 	- If you want RemindBot to run continuously - you have to handle that yourself for now.
 
-# What else
+# What else?
 
 This bot also will tell you the average amount of time all open Pull Requests with an assignee have been open.
 
