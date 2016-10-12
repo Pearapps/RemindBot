@@ -26,6 +26,6 @@ If these two are not true and the PR is older than a day (also configurable), th
 
 This bot also will tell you the average amount of time all open Pull Requests with an assignee have been open.
 
-## Why rust?
+## Why Rust?
 
 Rust is expressive, safe, and fast.
