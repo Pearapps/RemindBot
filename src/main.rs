@@ -170,10 +170,7 @@ fn main() {
     requests
     .iter()
     .filter(|x| {
-    	match x.assignee {
-    		Some(_) => true,
-    		_ => false
-    	}
+    	x.assignee.is_some()
     })
     .map(|pr| {
 		if let Some(time) = pr.created_at_date_time().ok() {
