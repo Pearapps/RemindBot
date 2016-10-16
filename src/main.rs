@@ -123,12 +123,6 @@ fn main() {
 	})
 	.filter(|x| {
 
-		fn is_after_desired_time(date_time: &DateTime<FixedOffset>, 
-			desired_time: &DateTime<Local>,
-			seconds: i64) -> bool {
-			desired_time.timestamp() - date_time.timestamp() > seconds
-		}
-
 		let pull_request_time: Result<DateTime<FixedOffset>, ParseError> = x.0.created_at_date_time();
 
 		if let Some(pull_request_date_time) = pull_request_time.ok() {
@@ -176,10 +170,7 @@ fn main() {
     requests
     .iter()
     .filter(|x| {
-    	match x.assignee {
-    		Some(_) => true,
-    		_ => false
-    	}
+    	x.assignee.is_some()
     })
     .map(|pr| {
 		if let Some(time) = pr.created_at_date_time().ok() {
@@ -202,4 +193,10 @@ fn main() {
     }) / (requests.len() as i64);
 
     println!("The average time the currently open pull requests with assignees have been open in {:?} is {:?} seconds", repo, to_measure);
+}
+
+fn is_after_desired_time(date_time: &DateTime<FixedOffset>, 
+	desired_time: &DateTime<Local>,
+	seconds: i64) -> bool {
+		desired_time.timestamp() - date_time.timestamp() > seconds
 }
